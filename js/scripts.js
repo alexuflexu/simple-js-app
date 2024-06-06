@@ -21,16 +21,16 @@ let pokemonList = [
   },
 ];
 
-for (let i = 0; i < pokemonList.length; i++) {
+pokemonList.forEach(function (pokemon) {
   // check if the height of the pokemon is below 0.7
-  if (pokemonList[i].height < 0.7) {
+  if (pokemon.height < 0.7) {
     // if it is below 0.7:
     // prettier-ignore
-    document.write(pokemonList[i].name +' (height: ' + pokemonList[i].height + ')' + " - Wow! That's small!" + '<br>');
+    document.write('<p>' + pokemon.name +' (height: ' + pokemon.height + ')' + " - Wow! That's small!" + '</p>');
   } else {
     // if the height is above 0.7:
-    document.write(
-      pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')' + '<br>'
-    );
+    // prettier-ignore
+    document.write('<p>' + pokemon.name + ' (height: ' + pokemon.height + ')' + '</p>'
+  );
   }
-}
+});
