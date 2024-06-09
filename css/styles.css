@@ -6,3 +6,25 @@ body {
   margin: 20px;
   color: rgb(64, 17, 77);
 }
+
+.custom-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #b96e3c;
+  color: #ffffff;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0; 
+}
+
+li {
+  display: block; 
+}

@@ -22,6 +22,23 @@ let pokemonRepository = (function () {
     },
   ];
 
+  function showDetails(pokemon) {
+    console.log(pokemon);
+  }
+
+  function addListItem(pokemon) {
+    let pokemonUl = document.querySelector('.pokemon-list');
+    let listItem = document.createElement('li');
+    let button = document.createElement('button');
+    button.innerText = pokemon.name;
+    button.classList.add('custom-button');
+    listItem.appendChild(button);
+    pokemonUl.appendChild(listItem);
+    button.addEventListener('click', function () {
+      showDetails(pokemon);
+    });
+  }
+
   return {
     getAll: function () {
       return pokemonList;
@@ -29,19 +46,10 @@ let pokemonRepository = (function () {
     add: function (pokemon) {
       pokemonList.push(pokemon);
     },
+    addListItem: addListItem,
   };
 })();
 
 pokemonRepository.getAll().forEach(function (pokemon) {
-  // check if the height of the pokemon is below 0.7
-  if (pokemon.height < 0.7) {
-    // if it is below 0.7:
-    // prettier-ignore
-    document.write('<p>' + pokemon.name +' (height: ' + pokemon.height + ')' + " - Wow! That's small!" + '</p>');
-  } else {
-    // if the height is above 0.7:
-    // prettier-ignore
-    document.write('<p>' + pokemon.name + ' (height: ' + pokemon.height + ')' + '</p>'
-  );
-  }
+  pokemonRepository.addListItem(pokemon);
 });
