@@ -66,18 +66,27 @@ let pokemonRepository = (function () {
 
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function () {
-      $('.modal-body').empty();
+      let modalBody = document.querySelector('.modal-body');
+      modalBody.innerHTML = '';
 
-      let contentElement = $('<p></p>').text('Height: ' + pokemon.height);
-      let imageElement = $('<img>')
-        .attr('src', pokemon.imageUrl)
-        .attr('alt', pokemon.name);
+      let contentElement = document.createElement('p');
+      contentElement.textContent = 'Height: ' + pokemon.height;
 
-      $('.modal-body').append(contentElement, imageElement);
+      let imageElement = document.createElement('img');
+      imageElement.src = pokemon.imageUrl;
+      imageElement.alt = pokemon.name;
 
-      $('#pokemonModalLabel').text(pokemon.name);
+      modalBody.appendChild(contentElement);
+      modalBody.appendChild(imageElement);
 
-      $('#pokemonModal').modal('show');
+      let modalLabel = document.querySelector('#pokemonModalLabel');
+      modalLabel.textContent = pokemon.name;
+
+      let modal = document.querySelector('#pokemonModal');
+      modal.classList.add('show');
+      modal.style.display = 'block';
+      modal.setAttribute('aria-modal', 'true');
+      modal.setAttribute('role', 'dialog');
     });
   }
 
