@@ -1,6 +1,6 @@
 # Pokedex App
 
-This project is an online Pokedex (Pocket Monsters) app that fetches data from the PokeAPI. It displays a list of 150 Pokemon from the API as buttons and allows the user to click each button to find out more about the Pokemon.
+This project is an online Pokedex app that fetches data from the PokeAPI. It displays a list of 150 Pokemon from the API as buttons and allows the user to click each button to find out more about the Pokemon.
 
 ## Features
 
