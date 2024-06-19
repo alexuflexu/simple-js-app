@@ -11,6 +11,15 @@ body {
 .custom-button {
   background-color: #b96e3c;
   color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+.custom-button:hover {
+  background-color: #9c5a31;
 }
 ul {
   list-style-type: none;
@@ -27,6 +36,7 @@ li {
 }
 .navbar-brand {
   font-size: 1.5rem;
+  font-weight: bold;
 }
 .nav-link {
   font-size: 1.2rem;
@@ -35,10 +45,19 @@ li {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 .list-group-item {
   margin: 0;
   background-color: #ebd6be;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+.list-group-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .navbar-light.bg-light {
   background-color: #07bd4dc9 !important;
