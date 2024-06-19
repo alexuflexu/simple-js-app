@@ -6,54 +6,27 @@ body {
   margin: 20px;
   color: rgb(64, 17, 77);
   text-align: center;
-  background-color: #d7dfc1;
 }
-
 .custom-button {
   background-color: #b96e3c;
   color: #ffffff;
 }
-
 ul {
   list-style-type: none;
   padding: 0;
 }
-
 li {
   display: block;
 }
-
 .modal h1 {
   margin-top: 0;
 }
-
 .modal p {
   margin-bottom: 0;
 }
-
 .navbar-brand {
   font-size: 1.5rem;
 }
-
 .nav-link {
   font-size: 1.2rem;
-}
-
-.pokemon-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
-}
-
-.list-group-item {
-  margin: 0;
-  background-color: #ebd6be;
-}
-
-.navbar-light.bg-light {
-  background-color: #07bd4dc9 !important;
-}
-
-h1 {
-  margin: 20px;
 }
