@@ -22,7 +22,7 @@ The Pokedex App is a web application that fetches data from the PokeAPI to displ
 - PokeAPI - https://pokeapi.co/
 
 ## How to Clone
-To clone the repository, run: `git clone <repository-url>`
+To clone the repository, run: `git clone https://github.com/alexuflexu/simple-js-app.git`
 
 ## Installation
 1. Navigate to the folder: `cd <repository-folder>`
